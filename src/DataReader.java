@@ -24,6 +24,10 @@ public class DataReader {
 			data[i] = br.readLine();
 		}
 		
+		br.close();
+		in.close();
+		fstream1.close();
+		
 		return data;
 	}
 
