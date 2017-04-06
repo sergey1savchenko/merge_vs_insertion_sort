@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -10,9 +9,6 @@ public class DataReader {
 	public static String[] readFile(String file, int size) throws IOException{
 		
 		String [] data = new String [size];
-		
-		//FileReader fr = new FileReader(file);
-		//BufferedReader br = new BufferedReader(fr);
 		
 		FileInputStream fstream1 = new FileInputStream(file);
 	    DataInputStream in = new DataInputStream(fstream1);
