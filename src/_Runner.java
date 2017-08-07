@@ -7,10 +7,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class _RunnerMultithreads {
+public class _Runner {
 	
 	protected static final int SIZE = 10000;												// MAX = 500000
-	protected static final int THREADS = 64;												// N
+	protected static final int THREADS = 8;													// N
 	private static double st, en;
 	
 	public static void main(String[] args) throws IOException {
@@ -43,7 +43,7 @@ public class _RunnerMultithreads {
 		}
 		
 		// creates copy for Merge Sort
-		ArrayList<String[]> arrays1 = new ArrayList<String[]>(arrays);					// fine only for IMMUTABLE objects
+		ArrayList<String[]> arrays1 = new ArrayList<String[]>(arrays);			// fine only for IMMUTABLE objects
 		
 		// runs InsertionSort in N threads and waits until all done
 		st = System.nanoTime();
@@ -104,7 +104,7 @@ public class _RunnerMultithreads {
          } catch (InterruptedException e) {
              e.printStackTrace();
          } finally {
-             pool1.shutdown();													// the end
+             pool1.shutdown();														// the end
          }
          
          // merging
